@@ -1,0 +1,55 @@
+#draw {
+    border: 1px solid grey;
+    cursor: crosshair;
+}
+
+button {
+    margin: 5px;
+}
+
+.color {
+    border: none;
+    height: 30px;
+    width: 30px;
+}
+
+#black {
+    background-color: black;
+}
+
+#blue {
+    background-color: blue;
+}
+
+#red {
+    background-color: red;
+}
+
+#chartreuse {
+    background-color: chartreuse;
+}
+
+.radius {
+
+    height: 30px;
+    width: 30px;
+}
+
+#radius1 {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: black;
+}
+#radius2 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: black;
+}
+#radius3 {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: black;
+}
