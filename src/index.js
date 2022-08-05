@@ -75,7 +75,15 @@ canvas.addEventListener("mousedown", (e) => {
     canvas.addEventListener("mousemove", mouseMove);
     canvas.addEventListener("mouseup", () => {
         canvas.removeEventListener("mousemove", mouseMove);
+        
     })
+});
+
+canvas.addEventListener("mousemove", (e) => {
+    const mousePos = getMousePos(e);
+    if (mousePos.x <= 0.5 || mousePos.x >= canvas.width - 1 || mousePos.y <= 0.5 || mousePos.y >= canvas.height - 1){
+        canvas.removeEventListener("mousemove", mouseMove);
+    }
 });
 
 reset.addEventListener("click", () => {
