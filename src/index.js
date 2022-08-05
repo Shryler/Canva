@@ -67,25 +67,25 @@ canvas.addEventListener("mousedown", (e) => {
     ctx.lineWidth = radius;
     ctx.lineJoin = "round";
     ctx.lineCap = "round";
+
     ctx.beginPath();
     ctx.lineTo(mousePos.x, mousePos.y);
     ctx.moveTo(mousePos.x, mousePos.y);
     ctx.stroke();
-
     canvas.addEventListener("mousemove", mouseMove);
     canvas.addEventListener("mouseup", () => {
         canvas.removeEventListener("mousemove", mouseMove);
-        
-    })
+    });
+
 });
 
-canvas.addEventListener("mousemove", (e) => {
-    const mousePos = getMousePos(e);
-    if (mousePos.x <= 0.5 || mousePos.x >= canvas.width - 1 || mousePos.y <= 0.5 || mousePos.y >= canvas.height - 1){
-        canvas.removeEventListener("mousemove", mouseMove);
-    }
-});
+    canvas.addEventListener("mousemove", (e) => {
+        const mousePos = getMousePos(e);
+        if (mousePos.x <= 0.5 || mousePos.x >= canvas.width - 1 || mousePos.y <= 0.5 || mousePos.y >= canvas.height - 1) {
+            canvas.removeEventListener("mousemove", mouseMove);
+        }
+    });
 
-reset.addEventListener("click", () => {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-})
+    reset.addEventListener("click", () => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+    });

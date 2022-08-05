@@ -13,6 +13,13 @@ button {
     width: 30px;
 }
 
+#white {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url(../img/eraser.svg);
+}
+
 #black {
     background-color: black;
 }
